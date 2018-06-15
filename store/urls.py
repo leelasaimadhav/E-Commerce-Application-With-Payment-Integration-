@@ -1,6 +1,6 @@
 from store import views
-from django.urls import include,path
+from django.conf.urls import include, url
 
 urlpatterns = [
-    path('',views.store,name='index'),
+    url(r'^',views.store,name='index'),
     ]
