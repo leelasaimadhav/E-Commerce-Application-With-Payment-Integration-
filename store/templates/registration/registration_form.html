@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register</title>
 </head>
 <body>
-<form method="post" action=".">
+{% extends 'base.html' %}
+{% block title %}
+    Registration Form - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <h1>Registration Form</h1>
+    <form method="post" action="">
     {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Register" />
+    {{ form.as_p }}
+    <input type="submit" value="{% trans 'Submit' %}" />
 </form>
 </body>
 </html>

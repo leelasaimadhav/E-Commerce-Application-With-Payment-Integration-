@@ -25,20 +25,21 @@ SECRET_KEY = 'dd#mhn=!)w^atf&&y3@g(-p&!*y-dm1s#4*-=kjy$d^ifu#^-n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registration',
+    'django.contrib.auth',
     'store',
+
 ]
 
 MIDDLEWARE = [
@@ -123,4 +124,5 @@ STATIC_URL = '/static/'
 
 #registration
 ACCOUNT_ACTIVATION_DAYS = 7
-REGISTRATION_AUTO_LOGIN = True
+REGISTRATION_AUTO_LOGIN = False
+INCLUDE_REGISTER_URL = True
