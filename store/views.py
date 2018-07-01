@@ -9,4 +9,4 @@ def store(request):
     context={
         'count':count,
     }
-    return render(request,'store.html',context)
+    return render(request,'base.html',context)

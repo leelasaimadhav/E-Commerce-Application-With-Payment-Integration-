@@ -31,13 +31,13 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration',
     'django.contrib.auth',
+    'registration',
+    'django.contrib.admin',
     'store',
 
 ]
@@ -124,5 +124,14 @@ STATIC_URL = '/static/'
 
 #registration
 ACCOUNT_ACTIVATION_DAYS = 7
-REGISTRATION_AUTO_LOGIN = False
-INCLUDE_REGISTER_URL = True
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/store/'
+
+#Email settings
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER ="maddy143pretty@gmail.com"
+EMAIL_HOST_PASSWORD ="9393063477"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
